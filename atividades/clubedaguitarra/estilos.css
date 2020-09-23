@@ -1,0 +1,20 @@
+header{
+    color: chocolate;
+}
+
+h2{
+    color: blueviolet;
+}
+
+nav{
+    color: blueviolet;
+}
+
+section{
+    display: inline-flex;
+}
+
+menu nav a  {
+    display: inline-block;
+    padding: 5px 10px;
+}
