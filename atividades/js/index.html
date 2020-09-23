@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>JavaScript</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>JavaScript</h1>
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-4">Dólar Hoje!</h1>
+            <p class="lead">Utilize esta calculadora online para fazer uma cotação Real Dólar.</p>
+            
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="numero1" placeholder="Digite um número">
+              </div>
+            <p class="lead">Dólar hoje: BRL = 4,17</p>
+              <button type="button" onclick="somar()" class="btn btn-primary mb-2">Calcular</button>
+            </form>
+            <hr class="my-4">
+            <h1 class="display-4" id="soma"></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-4">Tabuada</h1>
+            <p class="lead">Digite qualquer número e veja sua tabuada do 1 ao 9.</p>
+            
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="nasc" placeholder="número">
+              </div>
+              <button type="button" onclick="somarID()" class="btn btn-primary mb-2">Calcular</button>
+            </form>
+            <hr class="my-4">
+            <h1 class="display-4" id="idade"></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-4">Boletim</h1>
+            <p class="lead">Informe as notas e a frequencia do aluno para obter resultado final.</p>
+            
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="nota1" placeholder="Nota 1">
+                <input type="text" class="form-control" id="nota2" placeholder="Nota 2">
+                <input type="text" class="form-control" id="nota3" placeholder="Nota 3">
+              </div>
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="freq" placeholder="Frequencia">
+              </div>
+              <button type="button" onclick="aprov()" class="btn btn-primary mb-2">Calcular</button>
+            </form>
+            <hr class="my-4">
+            <h1 class="display-4" id="medFinal"></h1>
+            <h1 class="display-4" id="freqFinal"></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-4">Calculadora</h1>
+            <p class="lead">Escolha a operação e prossiga com os calculos.</p>
+            
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="calc1" placeholder="Num 1">
+                <input type="text" class="form-control" id="calc2" placeholder="Num 2">
+      					<label class="mr-sm-2" for="inlineFormCustomSelect"> Opções </label>
+      					<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        						<option selected>Operação</option>
+        						<option id = "adicao" value="1">Adição</option>
+        						<option id = "subtra" value="2">Subtração</option>
+        						<option id = "multip" value="3">Multiplicação</option>
+        						<option id = "divisao" value="4">Divisão</option>
+      					</select>
+              </div>
+              <button type="button" onclick="calculadora()" class="btn btn-primary mb-2">Calcular</button>
+            </form>
+            <hr class="my-4">
+            <h1 class="display-4" id="calcFinal"></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-4">Energy Company</h1>
+            <p class="lead">Prossiga com suas informações para saber sua conta de luz.</p>
+            
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="energ1" placeholder="Quilowatts">
+      					<label class="mr-sm-2" for="inlineFormCustomSelect2"> Cliente </label>
+      					<select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+        						<option selected>Operação</option>
+        						<option value="1">Físico</option>
+        						<option value="2">Jurídico</option>
+      					</select>
+              </div>
+              <button type="button" onclick="energy()" class="btn btn-primary mb-2">Calcular</button>
+            </form>
+            <hr class="my-4">
+            <h1 class="display-4" id="energFinal"></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-4">Food Park</h1>
+            <p class="lead">Escolha seu lanche e finalize o pedido.</p>
+            
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+      					<label class="mr-sm-2" for="inlineFormCustomSelect3"> Lanches </label>
+      					<select class="custom-select mr-sm-2" id="inlineFormCustomSelect3">
+        						<option selected>Escolha...</option>
+        						<option value="4">Pastel R$5,00</option>
+        						<option value="5">Crepe R$6,00</option>
+        						<option value="6">Pizza R$7,00</option>
+      					</select>
+              </div>
+              	<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="op1">
+  						<label class="form-check-label" for="inlineCheckbox1">Queijo <br>R$1,00</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="op2">
+  						<label class="form-check-label" for="inlineCheckbox2">Catupiri <br>R$2,00</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="op3">
+  						<label class="form-check-label" for="inlineCheckbox3">Cream-Cheese <br>R$3,00</label>
+				</div>
+
+              <input type="text" class="form-control" id="qntFood" placeholder="Quantidade">
+              <button type="button" onclick="foodPark()" class="btn btn-primary mb-2">Pedir</button>
+            </form>
+            <hr class="my-4">
+            <h1 class="display-4" id="foodFinal"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+
+    	function somar(){
+    	 var n1 = document.getElementById('numero1').value;
+       n2 = 4.17;
+    	 var r = parseFloat(n1) * parseFloat(n2);
+    	 document.getElementById('soma').innerHTML = r;
+    	}
+    	function somarID(){
+       document.getElementById('idade').innerHTML = " ";
+    	 var n1 = document.getElementById('nasc').value;
+
+       for (var i = 1; i < 10; i++) {
+        var r = parseFloat(n1) * i;
+        document.getElementById('idade').innerHTML = document.getElementById('idade').innerHTML+ i + "."+ n1 + "=" + r + "<br>";
+       }
+    }
+    	function aprov(){
+    		var nota1 = document.getElementById('nota1').value;
+    		var nota2 = document.getElementById('nota2').value; 
+    		var nota3 = document.getElementById('nota3').value; 
+    		var freq = document.getElementById('freq').value;
+    		var r1 = parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3);
+    		var r2 = parseFloat(r1) / 3;
+    		if (freq >= 70){
+    			if (r2 >= 7){
+    			document.getElementById('medFinal').innerHTML = 'Aluno Aprovado';
+    			document.getElementById('freqFinal').innerHTML = 'Média :' + r2 + '<br>' + 'Frequencia :' + freq + '%';	
+    			}
+    			if (r2 < 7){
+    			document.getElementById('medFinal').innerHTML = 'Aluno Reprovado';
+    			document.getElementById('freqFinal').innerHTML = 'Média ' + r2 + '<br>' + 'Frequencia :' + freq + '%'; 	
+    			}
+    		}
+    		if (freq < 70){
+    			document.getElementById('medFinal').innerHTML  = 'Aluno Reprovado por Frequencia';
+    			document.getElementById('freqFinal').innerHTML = 'Frequencia ' + freq + '%';
+    		}
+    	}
+    	function calculadora(){
+    		var checkbox = document.getElementById('inlineFormCustomSelect').value;
+    		var num1 = document.getElementById('calc1').value;
+    		var num2 = document.getElementById('calc2').value;
+    		var r;
+    		if (checkbox == 1){
+    			r = parseFloat(num1) + parseFloat(num2);
+    			document.getElementById('calcFinal').innerHTML = num1 + ' + ' + num2 + ' = ' +r;
+    		}
+    		if (checkbox == 2){
+    			r = parseFloat(num1) - parseFloat(num2);
+    			document.getElementById('calcFinal').innerHTML =  num1 + ' - ' + num2 + ' = ' +r;
+    		}
+    		if (checkbox == 3){
+    			r = parseFloat(num1) * parseFloat(num2);
+    			document.getElementById('calcFinal').innerHTML =  num1 + ' * ' + num2 + ' = ' +r;
+    		}
+    		if (checkbox == 4){
+    			r = parseFloat(num1) / parseFloat(num2);
+    			document.getElementById('calcFinal').innerHTML =  num1 + ' / ' + num2 + ' = ' +r;
+    		}
+    	}
+
+    	function energy(){
+    		var checkbox = document.getElementById('inlineFormCustomSelect2').value;
+    		var num1 = document.getElementById('energ1').value;
+   			var valor;
+    		if (checkbox == 1){
+    			valor = 0.56;
+    			var r =valor * parseFloat(num1);
+    			document.getElementById('energFinal').innerHTML = 'Seu gasto foi de R$' + r; 
+    		}
+    		if (checkbox == 2){
+    			valor = 0.88;
+    			var r =valor * parseFloat(num1);
+    			document.getElementById('energFinal').innerHTML = 'Seu gasto foi de R$' + r; 
+    		}
+    	}
+    	function foodPark(){
+    		var valorTotal;
+    		var checkbox = document.getElementById('inlineFormCustomSelect3').value;
+    		var qntFood = document.getElementById('qntFood').value;
+    		if (checkbox == 4){
+    			valorTotal = 5;
+    		}
+    		if (checkbox == 5){
+    			valorTotal = 6;
+    		}
+    		if (checkbox == 6){
+    			valorTotal = 7;
+    		}
+    		if (inlineCheckbox1.checked){
+    			valorTotal = valorTotal + 1;
+    		}
+    		if (inlineCheckbox2.checked){
+    			valorTotal = valorTotal + 2;
+    		}
+    		if (inlineCheckbox3.checked){
+    			valorTotal = valorTotal + 3;
+    		}
+
+
+    		document.getElementById('foodFinal').innerHTML = 'Seu gasto foi de R$' + qntFood*valorTotal; 
+    	}
+    </script>
+  </body>
+</html>
