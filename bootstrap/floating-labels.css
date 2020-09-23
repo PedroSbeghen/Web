@@ -1,0 +1,34 @@
+:root {
+  --input-padding-x: .75rem;
+  --input-padding-y: .75rem;
+}
+
+html,
+body {
+	background-color: #FFD700;
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
+}
+
+.form-signin {
+  border-radius: 50px;
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+  background-color: white;
+}
+
+.btn-block{
+  border: none;
+  background-color: #CD5C5C;
+}
